@@ -18,6 +18,7 @@ The client config file contains values defining :
 
 In case you want to create a new config file and provide your own user defined values, please use the below format for the property keys:
 
+Properties File Format
 monitoredDirectory=/path/to/monitored/directory
 keyFilterPattern=regex-pattern
 serverAddress=localhost:8080
@@ -37,11 +38,14 @@ The server config file contains values defining:
 
 In case you want to create a new config file and provide your own user defined values, please use the below format for the property keys:
 
+Properties File Format
 writeDirectory=/path/to/output/directory
 port=8080
 
 The above created file's path is then required to be provided as the program argument in order to run the program.
 
+**Important:**
+In order to run the program, we need to ensure that the server program is ran first and is listening on the port to accept the messages from the Client program otherwise if the client program attempts to connect to the server that is not started yet, the connection will fail.
 
 
 ######## TO BUILD AND RUN THE CLIENT PROGRAM ######
