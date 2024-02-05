@@ -1,5 +1,6 @@
 ####### CLIENT PROGRAM #########
-The Client program monitors a directory for new Java properties file using WatchService. When a new properties file appears in the monitored directory, it processes the properties file as follows:
+The Client program monitors a directory for new Java properties file using WatchService. 
+When a new properties file appears in the monitored directory, it processes the properties file as follows:
 
 • It reads the file into a HashMap.
 • It applies a regular expression pattern filter for the keys (i.e., remove key/value mappings
@@ -7,7 +8,7 @@ The Client program monitors a directory for new Java properties file using Watch
 • The filtered mappings are then relayed to a server program using a socket connection.
 • After the file is successfully sent to the server, the file is deleted from the directory.
 
-The client program’s main method accepts an argument specifying a config file path. I have added the sample config properties file (ClientConfig.properties) in the project source directory and provided this config file's path as program argument in order to run the program. 
+The client program’s main method accepts an argument specifying a config file path. I have added a sample config properties file (ClientConfig.properties) in the project source directory and provided this config file's path as program argument in order to run the program. 
 
 The client config file contains values defining :
 • 'monitoredDirectory' = the directory path that is monitored
